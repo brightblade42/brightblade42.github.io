@@ -1,1 +1,481 @@
-Hello world
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-08-26 Thu 17:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="ryan lee martin" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6c1ac70">1. Video/Image Editor</a>
+<ul>
+<li><a href="#org84a4b30">1.1. Prototype</a>
+<ul>
+<li><a href="#orgbd35ea7">1.1.1. We need to get a basic browser video player running ability to load file and play</a></li>
+</ul>
+</li>
+<li><a href="#org2d0fdae">1.2. Issues</a>
+<ul>
+<li><a href="#orgab3e27e">1.2.1. Scaling canvas images up/down</a></li>
+<li><a href="#org21fee5e">1.2.2. AnalyzedFrame</a></li>
+</ul>
+</li>
+<li><a href="#org1a2a20e">1.3. Ideas</a>
+<ul>
+<li><a href="#orgf48377e">1.3.1. Compare faces across images / video clips</a></li>
+<li><a href="#orgaef588d">1.3.2. Crop faces in video frames or images</a></li>
+<li><a href="#orgbf7255c">1.3.3. Pause frame / crop faces</a></li>
+<li><a href="#org76e798f">1.3.4. Concept of an Analyzed Frame</a></li>
+<li><a href="#orgc602349">1.3.5. FFMPEG/Wasm</a></li>
+<li><a href="#orgd83cfab">1.3.6. OpenCV/Wasm</a></li>
+<li><a href="#org5e320c1">1.3.7. Youtube-dl</a></li>
+<li><a href="#org05d2f67">1.3.8. Basic Image editing</a></li>
+</ul>
+</li>
+<li><a href="#org4acee85">1.4. Ray&rsquo;s notes</a></li>
+</ul>
+</li>
+<li><a href="#orgaf281ac">2. TradeShow woes</a>
+<ul>
+<li><a href="#orgd05ea7c">2.1. How to update dns on Ubuntu server</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+#+title Business Papers
+#+Author ryan lee martin
+</p>
+
+<div id="outline-container-org6c1ac70" class="outline-2">
+<h2 id="org6c1ac70"><span class="section-number-2">1.</span> Video/Image Editor</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+A basic video editor and Image for viewing and recognizing faces in a video file.
+</p>
+
+<p>
+We&rsquo;re focused on local video files as a 1st priority
+</p>
+</div>
+
+<div id="outline-container-org84a4b30" class="outline-3">
+<h3 id="org84a4b30"><span class="section-number-3">1.1.</span> Prototype</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgbd35ea7" class="outline-4">
+<h4 id="orgbd35ea7"><span class="section-number-4">1.1.1.</span> We need to get a basic browser video player running ability to load file and play</h4>
+<div class="outline-text-4" id="text-1-1-1">
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2d0fdae" class="outline-3">
+<h3 id="org2d0fdae"><span class="section-number-3">1.2.</span> Issues</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgab3e27e" class="outline-4">
+<h4 id="orgab3e27e"><span class="section-number-4">1.2.1.</span> Scaling canvas images up/down</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+I currently have no idea how to do this.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org9fdb1ac"></a><a href="http://falcon80.com/HTMLCanvas/CanvasTransformations/Scale.html">Canvas Transformation tuturial</a><br /></li>
+
+<li><a id="org534002c"></a><a href="https://medium.com/@pdx.lucasm/canvas-with-react-js-32e133c05258">Canvas+React</a><br /></li>
+</ol>
+</div>
+
+
+<div id="outline-container-org21fee5e" class="outline-4">
+<h4 id="org21fee5e"><span class="section-number-4">1.2.2.</span> AnalyzedFrame</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+a type that contains information on a video frame
+that has had faces detected and recognized.
+</p>
+
+<p>
+properties include:
+</p>
+<ul class="org-ul">
+<li>elapsed<sub>time</sub></li>
+<li>frame<sub>num</sub></li>
+<li>faces<sub>detected</sub></li>
+<li>faces<sub>identified</sub></li>
+<li><p>
+src<sub>frame</sub>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript">
+   <span style="color: #51afef;">let</span> <span style="color: #dcaeea;">x</span> = console.log(<span style="color: #98be65;">"cool"</span>);
+
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org1a2a20e" class="outline-3">
+<h3 id="org1a2a20e"><span class="section-number-3">1.3.</span> Ideas</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-orgf48377e" class="outline-4">
+<h4 id="orgf48377e"><span class="section-number-4">1.3.1.</span> Compare faces across images / video clips</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org7816fc6"></a>compare 2 or more images with one another<br /></li>
+
+<li><a id="org6624c48"></a>compare one or more face images with faces in video frame(s)<br /></li>
+</ol>
+</div>
+
+
+<div id="outline-container-orgaef588d" class="outline-4">
+<h4 id="orgaef588d"><span class="section-number-4">1.3.2.</span> Crop faces in video frames or images</h4>
+</div>
+
+<div id="outline-container-orgbf7255c" class="outline-4">
+<h4 id="orgbf7255c"><span class="section-number-4">1.3.3.</span> Pause frame / crop faces</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<p>
+copy cropped faces to another area.
+options to recognize, compare with one another. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76e798f" class="outline-4">
+<h4 id="org76e798f"><span class="section-number-4">1.3.4.</span> Concept of an Analyzed Frame</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<p>
+A frame can be analyzed in multiple ways:
+</p>
+<ol class="org-ol">
+<li>detected faces in frame matched against enrollments.</li>
+<li>detected faces in frame matched against a loaded image (may or may not be known to FR).
+<ul class="org-ul">
+<li>how close of a match is the detected image to the provided image.</li>
+</ul></li>
+<li>2 images compared with each other.</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgc602349" class="outline-4">
+<h4 id="orgc602349"><span class="section-number-4">1.3.5.</span> FFMPEG/Wasm</h4>
+<div class="outline-text-4" id="text-1-3-5">
+<p>
+ffmpeg is the industry standard video proc. tool.
+PV uses it. It can be loaded in the browser with web assembly
+</p>
+
+<p>
+<a href="http://ffmpegwasm.netlify.app">ffmpeg wasm</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd83cfab" class="outline-4">
+<h4 id="orgd83cfab"><span class="section-number-4">1.3.6.</span> OpenCV/Wasm</h4>
+<div class="outline-text-4" id="text-1-3-6">
+<p>
+OpenCV is a popular open source computer vision library.
+Can be compiled to wasm!
+</p>
+
+<p>
+<a href="http://aralroca.com/blog/opencv-in-the-web">OpenCV Wasm</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org5e320c1" class="outline-4">
+<h4 id="org5e320c1"><span class="section-number-4">1.3.7.</span> Youtube-dl</h4>
+<div class="outline-text-4" id="text-1-3-7">
+<p>
+a cmd line tool for downloading videos from youtube and other streaming svs.
+might be a good tool to integrate for testing/prototyping
+</p>
+
+<p>
+<a href="https://github.com/ytdl-org/youtube-dl">youtube-dl</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org05d2f67" class="outline-4">
+<h4 id="org05d2f67"><span class="section-number-4">1.3.8.</span> Basic Image editing</h4>
+<div class="outline-text-4" id="text-1-3-8">
+<p>
+<a href="https://www.youtube.com/watch?v=J243ncoInNE">React Photo edit</a>
+</p>
+
+<ul class="org-ul">
+<li>Screening App for Police</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4acee85" class="outline-3">
+<h3 id="org4acee85"><span class="section-number-3">1.4.</span> Ray&rsquo;s notes</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+The following are system requirements from the company Clearview AI. The ones offering their service to PDs using images harvested off of all social media sites like Facebook &amp; Instagram.
+</p>
+
+<p>
+The Capture fields are very import when it comes time for the Police to justify who they were searching for and why.
+Since we are offering an on-premise appliance, I am not as concerned about the Criminal Justice Information System security requirements.
+If the FR appliance is behind their firewall, it is on them.
+</p>
+
+<p>
+we will be asked if the app has been penetration tested and we’ll have to address this down the road.
+</p>
+
+<p>
+<b>Note</b> – It is my understanding the FR app from Clearview AI only can process still images, no video streams. This is our competitive advantage.
+</p>
+
+
+<p>
+j<img src="./images/FRScreening.png" alt="FRScreening.png" />
+</p>
+
+<p>
+cool!
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaf281ac" class="outline-2">
+<h2 id="orgaf281ac"><span class="section-number-2">2.</span> TradeShow woes</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgd05ea7c" class="outline-3">
+<h3 id="orgd05ea7c"><span class="section-number-3">2.1.</span> How to update dns on Ubuntu server</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-shell">    systemd-resolve --interface ens82f1 --set-dns 8.8.8.8
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: ryan lee martin</p>
+<p class="date">Created: 2021-08-26 Thu 17:04</p>
+</div>
+</body>
+</html>
